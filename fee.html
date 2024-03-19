@@ -1,253 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon"
-    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9CAMAAAC4XpwXAAAAYFBMVEUAAAD////X19dMTEyamprx8fGzs7P8/PzIyMiTk5MVFRVQUFD29vYuLi4kJCRZWVnh4eE8PDzBwcGCgoLOzs6mpqZzc3Pr6+sdHR03NzdEREQPDw+KiopiYmJ7e3tqamrf/TngAAACp0lEQVRoge2b0XajIBBAmSQEjRoJ1Zi22/b//7Imtl3XKJqZwdndw33pC809KDDAOAo6TJJmB7UGhyxNzJdVdX/2xSrmb4p9z66zVd1XMv1tt8fV5UodbWfXEvJWr2/29R97R3a174XkSu1BmXVHe5/CqERMrlp3KmhPldSYu5KpdZbXcSTdkcjfzaV42U5zOr6GU2/rKgcvxrpfYdyp9pt/cPwL57lZ6L75eXcqB/eAuyV/Y5Rf7GPyFsbXv/SN92GL2Y/3/Mo7j3yPkoM5ccjfcHKAisO+wdqBYeB/oOWwkew6wJYqL8y8ZBLyEeWJIAdLDXnI6dZhXoh2ymsHKIn2mYA+wxPRThl09MV+/FebpN4NqN1IONiFsKfjh5+Pu9cUwj45lo5DfQB7Pd36HNxunj3NbWh742vuQtu9kasObbei9tzXfBPaDufp1s86uN3z6IcRMcRq46bueXbDlkFW2iYdudp8fb+PxkHsi/EsiyvYqRewNHtzkbRTtxdEO3FnR7VD7QuJwe1gtE12yEdAt3fgjjVcdtzkY7P7gtMKdsxlAp/duy8Ibodoj/Z/2Z7bzRR26sKBy574g0aZhLTPbxnScPYl8WKs9zz2JbG6DGXXi/5vJKHAYveeYX8YuUL6D+yyT1521AnPONnVRnilbdGeKDOVO0TYaXfUfQzCjkmCjrNspv5JxWbH7Ofr+Z9dCOYWZXjrjAdzkiImZn6DOcrc3TqjcSh7yTPnDPL+gKfzuK4rdeJ48zn6UwBSKvYLQlqQlIu9QUpGUxc84jcQtN7T0/D4oZdTU8EtJ4eb98axfPiiSvd4/3NHzcD3ONeVXvoIjK5qVGCJRCKRSIQV2ZoR2XoZ2Voh2Top2Rox2fo44dpA4bpI2ZpQ4XpYkK0FBqk66E+mByG4wpJKHAAAAABJRU5ErkJggg=="
-    type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
-    ">
-    <link rel="script" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js
-    ">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="fee.css">
-  <title>BLOG PAGE</title>
-  <link rel="javascript" href="bootstrap-4.3.1-dist/js/bootstrap.bundle.js">
-
-  <!-- <link rel="stylesheet" href="blog2.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Sign Up Form</title>
+	<style>
+		body {
+			background-color: #1a1a1a;
+			color: white;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		form {
+			background-color: #333333;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px grey;
+			width: 300px;
+			margin: 0 auto;
+		}
+		input[type=text], input[type=password] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			background-color: #1a1a1a;
+			color: white;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+		}
+		button:hover {
+			opacity: 0.8;
+		}
+		.cancelbtn {
+			width: auto;
+			padding: 10px 18px;
+			background-color: #f44336;
+		}
+		.imgcontainer {
+			text-align: center;
+			margin: 24px 0 12px 0;
+		}
+		img.avatar {
+			width: 40%;
+			border-radius: 50%;
+		}
+		.container {
+			padding: 16px;
+		}
+		span.psw {
+			float: right;
+			padding-top: 16px;
+		}
+		@media screen and (max-width: 300px) {
+			span.psw {
+				display: block;
+				float: none;
+			}
+			.cancelbtn {
+				width: 100%;
+			}
+		}
+	</style>
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">My Blog </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="blog2.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#tk">about</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- <iframe src="france.html" name="iframe_a" height="600px" width="100%" title="Iframe Example" class="tk"></iframe>  <section class="footer">
-
-   
-</section> -->
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=600" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<h1>
-  TRENDING :
-</h1>
-  <div class="hhh">
-   
-  <div class="card" style="width: 18rem;">
-    <img src="https://wallpapers.com/images/high/cricket-open-wide-stadium-q056av0bsp3a2jx7.webp" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">CRICKET STADIUM</h5>
-      <p class="CRICKET ">Cricket is one of the most popular sports and people are always eager to know its related news.</p>
-      <a href="cricket.html" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img src="https://wallpapers.com/images/high/live-car-p635p3cj7x0qkf44.webp" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">CAR</h5>
-      <p class="card-text">The modern cars are shown in this blog which will be very interesting for you.</p>
-      <a href="car.html" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img src="https://wallpapers.com/images/hd/clear-green-mountain-1208678a4ama9jw0.webp" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">LANDSCAPE</h5>
-      <p class="card-text">It shows the beauty of the landscapes and how to conserve them for future generation. </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img src="https://wallpapers.com/images/hd/chili-spices-food-herbs-4ufm5tuhg74cif8b.webp" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">PULSES</h5>
-      <p class="card-text">Pulses are very healthy to eat as it keeps you fit and is an important component of diet.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-</div>
-<iframe id="tk"  img src="about.html" name="iframe_a" height="600px" width="100%" title="Iframe Example" class="tk"></iframe>  <section class="footer">
-
-    <!-- <div class="follow">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-    </div>
-
-    <div class="credit">created by <span>mr. web designer</span> | all rights reserved</div> -->
-
-</section>
-<form class="iop" style="width: 26rem;">
-  <!-- Name input -->
-  <div data-mdb-input-init class="form-outline mb-4">
-    <input type="text" id="form4Example1" class="form-control" />
-    <label class="form-label" for="form4Example1">Name</label>
-  </div>
-
-  <!-- Email input -->
-  <div data-mdb-input-init class="form-outline mb-4">
-    <input type="email" id="form4Example2" class="form-control" />
-    <label class="form-label" for="form4Example2">Email address</label>
-  </div>
-
-  <!-- Message input -->
-  <div data-mdb-input-init class="form-outline mb-4">
-    <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-    <label class="form-label" for="form4Example3">Comment</label>
-  </div>
-
-  <!-- Checkbox -->
-  <div class="form-check d-flex justify-content-center mb-4">
-    <input
-      class="form-check-input me-2"
-      type="checkbox"
-      value=""
-      id="form4Example4"
-      checked
-    />
-    <label class="form-check-label" for="form4Example4">
-      Send me a copy of this message
-    </label>
-  </div>
-
-  <!-- Submit button -->
-  <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4">Done</button>
-</form>
-<footer class="bg-body-tertiary text-center">
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a
-      data-mdb-ripple-init
-        class="btn text-white btn-floating m-1"
-        style="background-color: #3b5998;"
-        href="#!"
-        role="button"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
-
-      <!-- Twitter -->
-      <a
-        data-mdb-ripple-init
-        class="btn text-white btn-floating m-1"
-        style="background-color: #55acee;"
-        href="#!"
-        role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
-
-      <!-- Google -->
-      <a
-        data-mdb-ripple-init
-        class="btn text-white btn-floating m-1"
-        style="background-color: #dd4b39;"
-        href="#!"
-        role="button"
-        ><i class="fab fa-google"></i
-      ></a>
-
-      <!-- Instagram -->
-      <a
-        data-mdb-ripple-init
-        class="btn text-white btn-floating m-1"
-        style="background-color: #ac2bac;"
-        href="#!"
-        role="button"
-        ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a
-        data-mdb-ripple-init
-        class="btn text-white btn-floating m-1"
-        style="background-color: #0082ca;"
-        href="#!"
-        role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-      <!-- Github -->
-      <a
-        data-mdb-ripple-init
-        class="btn text-white btn-floating m-1"
-        style="background-color: #333333;"
-        href="#!"
-        role="button"
-        ><i class="fab fa-github"></i
-      ></a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2020 Copyright:
-    <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<script>
-  // Initialization for ES Users
-import { Input, Ripple, initMDB } from "mdb-ui-kit";
-
-initMDB({ Input, Ripple });
-</script>
-
-
+	<form>
+		<div class="imgcontainer">
+			<img src="img_avatar2.png" alt="Avatar" class="avatar">
+		</div>
+		<div class="container">
+			<label for="uname"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="uname" required>
+			<label for="email"><b>Email</b></label>
+			<input type="text" placeholder="Enter Email" name="email" required>
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" required>
+			<label for="psw-repeat"><b>Repeat Password</b></label>
+			<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+			<button type="submit">Sign Up</button>
+		</div>
+		<div class="container" style="background-color:#333333">
+			<button type="button" class="cancelbtn">Cancel</button>
+			<span class="psw">Already have an account? <a href="b.html">Sign in</a></span>
+		</div>
+	</form>
 </body>
-
 </html>
+
                    
